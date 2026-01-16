@@ -1,0 +1,32 @@
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/base:noble
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    #   target: production
+    volumes:
+      - .:/app
+    environment:
+      - VLLM_HOST=http://vllm:8000
+    depends_on:
+      - vllm
+    command: sleep infinity
+
+  vllm:
+    image: vllm/vllm-openai:latest
+    command: --model ${templateOption:modelName}
+    ports:
+      - "8000:8000"
+    ipc: host
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - ~/.cache/huggingface:/root/.cache/huggingface
