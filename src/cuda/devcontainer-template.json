@@ -1,0 +1,50 @@
+{
+    "id": "cuda",
+    "version": "1.0.0",
+    "name": "NVIDIA CUDA",
+    "description": "A dev container for CUDA development with NVIDIA GPUs.",
+    "documentationURL": "https://github.com/zenless-lab/devcontainer-templates/tree/main/src/cuda",
+    "licenseURL": "https://github.com/zenless-lab/devcontainer-templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "CUDA Image version (tag)",
+            "proposals": [
+                "13.1.0-devel-ubuntu24.04",
+                "13.1.0-devel-ubuntu22.04",
+                "13.1.0-runtime-ubuntu24.04",
+                "13.1.0-runtime-ubuntu22.04",
+                "13.1.0-base-ubuntu24.04",
+                "13.1.0-base-ubuntu22.04",
+                "12.8.1-cudnn-devel-ubuntu24.04",
+                "12.8.1-cudnn-devel-ubuntu22.04",
+                "12.8.1-cudnn-devel-ubuntu20.04",
+                "12.8.1-cudnn-runtime-ubuntu24.04",
+                "12.8.1-cudnn-runtime-ubuntu22.04",
+                "12.8.1-cudnn-runtime-ubuntu20.04",
+                "12.8.1-devel-ubuntu24.04",
+                "12.8.1-devel-ubuntu22.04",
+                "12.8.1-devel-ubuntu20.04",
+                "12.8.1-runtime-ubuntu24.04",
+                "12.8.1-runtime-ubuntu22.04",
+                "12.8.1-runtime-ubuntu20.04",
+                "11.8.0-cudnn8-devel-ubuntu22.04",
+                "11.8.0-cudnn8-devel-ubuntu20.04"
+            ],
+            "default": "13.1.0-devel-ubuntu22.04"
+        },
+        "defaultUser": {
+            "type": "string",
+            "description": "Default user",
+            "proposals": [
+                "devcontainer",
+                "vscode",
+                "codespace"
+            ],
+            "default": "codespace"
+        }
+    },
+    "platforms": [
+        "Linux"
+    ]
+}
