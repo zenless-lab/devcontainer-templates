@@ -1,0 +1,42 @@
+{
+	"name": "Python with vLLM",
+	"dockerComposeFile": [
+		"../compose.yaml",
+		"./compose.dev.yaml"
+	],
+	"service": "app",
+	"workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+
+	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			// 👇 Uncomment to use zsh as the default shell. 
+			// "configureZshAsDefaultShell": true
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "${templateOption:pythonVersion}"
+		}
+	},
+
+	"remoteUser": "${templateOption:defaultUser}",
+
+	// 👇 Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.copilot",
+				"github.vscode-github-actions",
+				"ms-python.python",
+				"tamasfe.even-better-toml",
+				"charliermarsh.ruff",
+				"astral-sh.ty"
+			]
+		}
+	}
+	
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// 👇 Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+}

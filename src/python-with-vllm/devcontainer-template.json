@@ -1,0 +1,40 @@
+{
+    "id": "python-with-vllm",
+    "version": "1.0.0",
+    "name": "Python with vLLM",
+    "description": "A dev container for Python development with vLLM service connected.",
+    "documentationURL": "https://github.com/zenless-lab/devcontainer-templates/tree/main/src/python-with-vllm",
+    "licenseURL": "https://github.com/zenless-lab/devcontainer-templates/blob/main/LICENSE",
+    "options": {
+        "pythonVersion": {
+            "type": "string",
+            "description": "Python version",
+            "proposals": [
+                "3.13",
+                "3.12",
+                "3.11",
+                "3.10",
+                "3.9"
+            ],
+            "default": "3.12"
+        },
+        "modelName": {
+            "type": "string",
+            "description": "LLM name to use",
+            "default": "Qwen/Qwen3-0.6B"
+        },
+        "defaultUser": {
+            "type": "string",
+            "description": "Default user",
+            "proposals": [
+                "devcontainer",
+                "vscode",
+                "codespace"
+            ],
+            "default": "codespace"
+        }
+    },
+    "platforms": [
+        "All"
+    ]
+}

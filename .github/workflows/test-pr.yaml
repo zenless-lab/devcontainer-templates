@@ -15,6 +15,7 @@ jobs:
             color: ./**/color/**
             hello: ./**/hello/**
             cuda: ./**/cuda/**
+            python-with-vllm: ./**/python-with-vllm/**
 
   test:
     needs: [detect-changes]
