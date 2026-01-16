@@ -16,4 +16,6 @@ Ensure your host machine is properly configured to support GPU passthrough if yo
 ## Options
 
 - **Python Version**: Select the version of Python to install.
+- **modelName**: LLM name to use.
+- **defaultUser**: Default user.
 
